@@ -1,13 +1,16 @@
 package com.company.homework7;
 
 public class Person {
-    String fullName;
-    int age;
+    public String fullName;
+    public int age;
 
     Person() {
     }
 
-    Person(String fullName, int age) {
+
+
+
+    public Person(String fullName, int age) {
         this.fullName = fullName;
         this.age = age;
     }
