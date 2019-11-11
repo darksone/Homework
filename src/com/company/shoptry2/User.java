@@ -32,7 +32,7 @@ public class User {
     }
 
     public String getPassword() {
-        return password.charAt(0) + "************";
+        return password;
     }
 
     public void setPassword(String password) {
