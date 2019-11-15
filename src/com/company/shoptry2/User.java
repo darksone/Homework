@@ -1,26 +1,14 @@
 package com.company.shoptry2;
 
 import java.util.Objects;
-import java.util.Scanner;
+
 
 public class User {
     private String login, password;
 
-    public Basket getBaskets() {
-        return baskets;
-    }
-
-    public void setBaskets(Basket baskets) {
-        this.baskets = baskets;
-    }
-
-    private Basket baskets;
-
-    public User(String login, String password, Basket baskets) {
+    public User(String login, String password) {
         this.login = login;
         this.password = password;
-        this.baskets = baskets;
-
     }
 
     public String getLogin() {
@@ -39,15 +27,13 @@ public class User {
         this.password = password;
     }
 
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return Objects.equals(login, user.login) &&
-                Objects.equals(password, user.password) ;
+                Objects.equals(password, user.password);
     }
 
     @Override
@@ -62,6 +48,4 @@ public class User {
                 ", password='" + password + '\'' +
                 '}';
     }
-
-
 }

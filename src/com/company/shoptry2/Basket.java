@@ -1,40 +1,33 @@
 package com.company.shoptry2;
 
-import java.util.Arrays;
+import java.time.LocalDate;
 
 public class Basket {
-    private Product[] products;
+    private Product product;
+    private LocalDate localDate;
 
-    public Basket(Product... products) {
-        this.products = products;
+    public Basket(Product product, LocalDate localDate) {
+        this.localDate = localDate;
+        this.product = product;
     }
 
-    public Product[] getProducts() {
-        return products;
+    public Product getProduct() {
+        return product;
     }
 
     public void setProducts(Product[] products) {
-        this.products = products;
+        this.product = product;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Basket basket = (Basket) o;
-        return Arrays.equals(products, basket.products);
+    public LocalDate getLocalDate() {
+        return localDate;
     }
 
-    @Override
-    public int hashCode() {
-        return Arrays.hashCode(products);
+    public void setLocalDate(LocalDate localDate) {
+        this.localDate = localDate;
     }
 
-    @Override
-    public String toString() {
-        return "Basket{" +
-                "products=" + Arrays.toString(products) +
-                '}';
-    }
+
 }
+
 

@@ -2,7 +2,7 @@ package com.company.shoptry2;
 
 import java.util.Objects;
 
-public class Product {
+public class Product  {
     private String name;
     private double rate, price;
 
@@ -11,6 +11,7 @@ public class Product {
         this.rate = rate;
         this.price = price;
     }
+    public Product(){}
 
     public String getName() {
         return name;
@@ -36,6 +37,8 @@ public class Product {
         this.price = price;
     }
 
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -60,3 +63,4 @@ public class Product {
                 '}';
     }
 }
+
